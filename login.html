@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexikon</title>
+    <link rel="stylesheet" href="style1.css">
+    <script src="https://kit.fontawesome.com/2edfbc5391.js"crossorigin="anonymous"></script>
+    
+</head>
+<body>
+   <div class="page">
+       <div class="navbar">
+           <img src="Images/shlogo.jpg" class="logo">
+           <h1>Nexi<span style="font-family: 'Merienda', cursive;
+            color:rgb(20, 76, 80);">kon</span></h1>
+           <nav>
+               <ul>
+                   <li><a href=""class="active">Login</a></li>
+                   <li><a href="staff_Login.html">Staff Login</a></li>
+                   <li><a href="Rules&Regulations.html">Rules & Regulations</a></li>
+                </ul>
+            </nav>
+            <a href="Adminlogin.php" class="btn">Admin Login</a>
+       </div>
+       <div class="row">
+        <div class="col-1">
+             <img src="Images/building1.jpg" >
+        </div>
+        <div class="col-2">
+           <div class="form-container">
+               <div class="form-btn">
+                   <span onclick="login()">Login</span>
+                   <!-- <span onclick="register()">Register</span> -->
+                   <hr id="indicator">
+                </div>
+                <form action="login.php" method="POST" id="Loginform">
+                    <input type="text" placeholder="Username" name="resi_username" required>
+                    <!-- <input type="email" placeholder="E-mail" name="email" required> -->
+                    <!-- <input type="text" placeholder="Flat-No." name="flatno" required> -->
+                    <input type="password" placeholder="Password" name="resi_password" required>
+                    <button type="submit" class="btn-losi">Login</button><br>
+                    <!-- <a href="">Forget Password...???</a> -->
+                    
+                </form>
+
+           </div>
+             
+        </div>
+    </div>
+   </div>
+   <hr>
+  
+   <script>
+       var Loginform=document.getElementById("Loginform")
+    //    var Regform=document.getElementById("Regform")
+       var indicator=document.getElementById("indicator")
+
+         function login(){
+            // Regform.style.transform= "translateX(300px)";
+            Loginform.style.transform= "translateX(300px)";
+            indicator.style.transform= "translateX(0px)";
+
+         }
+         
+   </script>
+</body>
+</html>

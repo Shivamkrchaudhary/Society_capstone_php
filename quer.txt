@@ -1,0 +1,85 @@
+Query to create a table (resident_table) in php musql:
+
+CREATE TABLE resident_table (
+  username INT PRIMARY KEY,
+  password VARCHAR(30) NOT NULL,
+  full_name VARCHAR(30) NOT NULL,
+  phone_number CHAR(10) NOT NULL UNIQUE,
+  email VARCHAR(255) NOT NULL UNIQUE,
+  flat_number INT NOT NULL UNIQUE
+);
+
+
+Query to insert values into the table:
+INSERT INTO resident_table (
+  username,
+  password,
+  full_name,
+  phone_number,
+  email,
+  flat_number
+)
+VALUES (
+  10000008,
+  'shivam@2003',
+  'Shivam Kumar Chaudhary',
+  '7303618969',
+  'shivamkr111@gmail.com',
+  101
+);
+
+===================================================================================================================================
+
+Query to create a table (staff_table) in php musql:
+
+CREATE TABLE staff_table (
+  username INT PRIMARY KEY,
+  password VARCHAR(30) NOT NULL,
+  full_name VARCHAR(30) NOT NULL,
+  phone_number CHAR(10) NOT NULL UNIQUE,
+  email VARCHAR(255) NOT NULL UNIQUE,
+  flat_number INT NOT NULL UNIQUE
+);
+
+Query to insert values into the table:
+INSERT INTO staff_table (
+  username,
+  password,
+  full_name,
+  phone_number,
+  email,
+  flat_number
+)
+VALUES (
+  0123456789,
+  'staff@5555',
+  'Raghav Talwar',
+  '7986991330',
+  'talwar.raghav111@gmail.com',
+  101
+);
+
+
+Query to create a table (complaints_table) in php musql:
+
+CREATE TABLE complaints_table (
+  complaint_id INT AUTO_INCREMENT PRIMARY KEY,
+  date DATE NOT NULL,
+  description VARCHAR(255) NOT NULL,
+  category VARCHAR(50) NOT NULL,
+  status VARCHAR(20) NOT NULL DEFAULT 'Pending'
+);
+
+ALTER TABLE complaints_table
+ADD flat_number INT UNIQUE NOT NULL;
+
+
+Query to create a table (announcement) in php musql:
+
+CREATE TABLE announcement (
+  announcement_id INT AUTO_INCREMENT PRIMARY KEY,
+  announcement_date DATE NOT NULL,
+  title VARCHAR(20) NOT NULL,
+  description VARCHAR(255) NOT NULL,
+  audience VARCHAR(20) NOT NULL DEFAULT 'resident'
+);
